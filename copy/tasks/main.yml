@@ -1,0 +1,5 @@
+---
+- name: copy file from master to slave
+  copy:
+    src: /home/master/ansible/
+    dest: /home/slave/

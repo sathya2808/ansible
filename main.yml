@@ -1,0 +1,9 @@
+---
+- name: yum installation
+  hosts: slaveserver
+  become: yes
+  remote_user: slave
+  roles:
+    - yum
+    - copy
+    - tomcat  

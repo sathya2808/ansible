@@ -1,0 +1,10 @@
+---
+- name: download tomcat from url
+  get_url:
+    url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65-windows-x64.zip
+    dest: /etc/
+- name: extract zip file
+  ansible.builtin.unarchive:
+    src: /etc/apache-tomcat-9.0.65-windows-x64.zip
+    dest: /etc/
+    remote_src: yes
